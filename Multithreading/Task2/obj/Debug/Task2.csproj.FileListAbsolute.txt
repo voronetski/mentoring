@@ -1,0 +1,7 @@
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\bin\Debug\Task2.exe.config
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\bin\Debug\Task2.exe
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\bin\Debug\Task2.pdb
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\obj\Debug\Task2.csprojAssemblyReference.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\obj\Debug\Task2.exe
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task2\obj\Debug\Task2.pdb

@@ -1,0 +1,14 @@
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\bin\Debug\PowerManagementApiHandler2.dll
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\bin\Debug\PowerManagementApiHandler2.pdb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\bin\Debug\PowerManagementApiHandler2.tlb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\obj\Debug\PowerManagementApiHandler.csproj.CoreCompileInputs.cache
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\obj\Debug\PowerManagementApiHandler2.dll
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler2\obj\Debug\PowerManagementApiHandler2.pdb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\bin\Debug\PowerManagementApiHandler.dll
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\bin\Debug\PowerManagementApiHandler.pdb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\bin\Debug\PowerManagementApiHandler.tlb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\obj\Debug\PowerManagementApiHandler.csproj.CoreCompileInputs.cache
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\obj\Debug\PowerManagementApiHandler.dll
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\obj\Debug\PowerManagementApiHandler.pdb
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maxim_voronetski\source\repos\PowerManagementApiHandler\PowerManagementApiHandler\obj\Debug\PowerManagementApiHandler.csproj.CopyComplete

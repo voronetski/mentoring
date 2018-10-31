@@ -1,0 +1,7 @@
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\bin\Debug\Task3.exe.config
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\bin\Debug\Task3.exe
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\bin\Debug\Task3.pdb
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\obj\Debug\Task3.exe
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task3\obj\Debug\Task3.pdb

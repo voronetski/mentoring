@@ -1,0 +1,9 @@
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\bin\Debug\netstandard2.0\Task4.deps.json
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\bin\Debug\netstandard2.0\Task4.dll
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\bin\Debug\netstandard2.0\Task4.pdb
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.csprojAssemblyReference.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.csproj.CoreCompileInputs.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.AssemblyInfoInputs.cache
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.AssemblyInfo.cs
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.dll
+C:\Users\maxim_voronetski\source\repos\Multithreading\Task4\obj\Debug\netstandard2.0\Task4.pdb
