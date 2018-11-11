@@ -1,0 +1,1 @@
+xsd /classes %1

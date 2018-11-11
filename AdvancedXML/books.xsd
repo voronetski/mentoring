@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="catalog" targetNamespace="http://library.by/catalog" xmlns:mstns="http://library.by/catalog" xmlns="http://library.by/catalog" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:simpleType name="ISBN-type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{1}-\d{5}-\d{3}-\d{1}|\d{1}-\d{3}-\d{5}-\d{1}|\d{1}-\d{2}-\d{6}-\d{1}"/>           
+        </xs:restriction>
+    </xs:simpleType>
+	    <xs:simpleType name="CustomDateyyyy-mm-dd">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])"/>           
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:simpleType name="genre-list">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Computer" />
+			<xs:enumeration value="Fantasy" />
+			<xs:enumeration value="Horror" />
+			<xs:enumeration value="Romance" />
+			<xs:enumeration value="Science Fiction" />
+		</xs:restriction>
+	</xs:simpleType>
+  <xs:element name="catalog" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="book">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="isbn" type="ISBN-type" minOccurs="0" msdata:Ordinal="0" />
+              <xs:element name="author" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              <xs:element name="title" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              <xs:element name="genre" type="genre-list" minOccurs="0" msdata:Ordinal="3" />
+              <xs:element name="publisher" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+              <xs:element name="publish_date" type="CustomDateyyyy-mm-dd" minOccurs="0" msdata:Ordinal="5" />
+              <xs:element name="description" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+              <xs:element name="registration_date" type="CustomDateyyyy-mm-dd" minOccurs="0" msdata:Ordinal="7" />
+            </xs:sequence>
+            <xs:attribute name="id" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

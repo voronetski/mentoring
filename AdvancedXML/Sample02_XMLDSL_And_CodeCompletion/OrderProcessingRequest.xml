@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<class-map
+	xmlns="http://schemas.aramark.com/atlas/dalgenerator"
+	name="OrderProcessingRequest"
+	connection-string="ACPTransactions.DataAccess.ConnectionString"
+	generate-empty-constructor="true"
+	generate-copy-constructor="true"
+	partial="true"
+	security-context="None"
+	>
+	
+	<properties>
+		<property name="OrderGroupID" sql-name="OrderGroupID" type="Guid" />
+		<property name="SoldToID" sql-name="SoldToId" type="Guid" />
+		<property name="ProcessingRequestStatusID" sql-name="ProcessingRequestStatusID" type="int" />
+		<property name="DateSubmitted" sql-name="DateSubmitted" type="DateTime" />
+		<property name="StatusID" sql-name="ProcessingRequestStatusID" type="int" />
+		<property name="PrinterID" sql-name="PrinterID" type="string" />
+    <property name="NewProp" type="long" is-required="true" sql-name="NewProp"/>
+	</properties>
+
+	<methods>
+		<selector name="GetOrdersToPrint" procedure="OMS.usp_GetOrdersToPrint">
+			<in-parameter name="PrintClusterID" sql-name="PrintClusterID" type="string" />
+		</selector>
+
+		<updater name="SetOrdersPrinting" procedure="OMS.usp_SetOrdersPrinting">
+			<in-parameter name="ChitOrderGroupIDs" enumerable-type="GuidListType" sql-name="ChitOrderGroupIDs" sql-type="SqlDbType.Structured">
+				<table-field name="Id" property="Id"  type="Guid"  />
+			</in-parameter>
+			<in-parameter name="ReceiptOrderGroupIDs" enumerable-type="GuidListType" sql-name="ReceiptOrderGroupIDs" sql-type="SqlDbType.Structured">
+				<table-field name="Id" property="Id"  type="Guid"  />
+			</in-parameter>
+			<in-parameter name="PrintTaskIDs" enumerable-type="int?" sql-name="PrintTaskIDs" sql-type="SqlDbType.Structured">
+				<table-field name="Value" property="Value"  type="int"  />
+			</in-parameter>
+		</updater>
+
+		<updater name="SetOrdersPrintResults" procedure="OMS.usp_SetOrdersPrintResults">
+			<in-parameter name="PrintTaskResults" enumerable-type="OrderPrintTaskResult" sql-name="OrderPrintTaskResults" sql-type="SqlDbType.Structured">
+				<table-field name="IsSuccess" property="IsSuccess" type="bool"  />
+				<table-field name="PrintErrorCode" property="PrintErrorCode"  type="string"  />
+				<table-field name="PrinterID" property="PrinterID"  type="string"  />
+				<table-field name="PrintJobID" property="PrintJobID"  type="int"  />
+				<table-field name="PrinterStatus" property="PrinterStatus"  type="int"  />
+			</in-parameter>
+		</updater>
+	</methods>
+</class-map>

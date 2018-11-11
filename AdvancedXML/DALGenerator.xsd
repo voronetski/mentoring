@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://schemas.aramark.com/atlas/dalgenerator"
+	xmlns="http://schemas.aramark.com/atlas/dalgenerator">
+	<!-- todo mk extract base type for netDataTypes and netWsDataType -->
+	<xs:simpleType name="netDataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="bool" />
+			<xs:enumeration value="DateTime" />
+			<xs:enumeration value="decimal" />
+			<xs:enumeration value="double" />
+			<xs:enumeration value="float" />
+			<xs:enumeration value="int" />
+			<xs:enumeration value="int?" />
+			<xs:enumeration value="long" />
+			<xs:enumeration value="short" />
+			<xs:enumeration value="string" />
+			<xs:enumeration value="byte[]" />
+			<xs:enumeration value="HierarchyTreeNodeTypeEnum" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="netConvertTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Boolean" />
+			<xs:enumeration value="Byte" />
+			<xs:enumeration value="Char" />
+			<xs:enumeration value="DateTime" />
+			<xs:enumeration value="DateTimeOffset" />
+			<xs:enumeration value="Decimal" />
+			<xs:enumeration value="Double" />
+			<xs:enumeration value="Enum" />
+			<xs:enumeration value="Float" />
+			<xs:enumeration value="Guid" />
+			<xs:enumeration value="Int16" />
+			<xs:enumeration value="Int32" />
+			<xs:enumeration value="Int64" />
+			<xs:enumeration value="String" />
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- todo mk extract base type for netDataTypes and netWsDataType -->
+	<xs:simpleType name="netWsDataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="bool" />
+			<xs:enumeration value="DateTime" />
+			<xs:enumeration value="decimal" />
+			<xs:enumeration value="double" />
+			<xs:enumeration value="float" />
+			<xs:enumeration value="int" />
+			<xs:enumeration value="int?" />
+			<xs:enumeration value="long" />
+			<xs:enumeration value="short" />
+			<xs:enumeration value="string" />
+			<xs:enumeration value="byte[]" />
+			<xs:enumeration value="HierarchyTreeNodeTypeEnum" />
+			<xs:enumeration value="PageParameters" />
+			<xs:enumeration value="SearchQueryObject" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="netTranformHelper">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SerializationHelper.SerializeSearchQuery" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="netReturnWrapperTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PageResultSet" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="netReturnFields">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="pageParameters" />
+			<xs:enumeration value="result" />
+			<xs:enumeration value="totalRows" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sqlDataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SqlDbType.Structured" />
+			<xs:enumeration value="SqlDbType.Xml" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxMinValue">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:float">
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="securityContextType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None" />
+			<xs:enumeration value="User" />
+			<xs:enumeration value="UserClient" />
+			<xs:enumeration value="UserArea" />
+			<xs:enumeration value="UserClientArea" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="netProcedureWrapper">
+		<xs:sequence>
+			<xs:element name="in-parameter" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element minOccurs="0" maxOccurs="unbounded" name="in-parameter-field">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:string" use="required" />
+								<xs:attribute name="type" type="netDataTypes" use="required" />
+								<xs:attribute name="sql-name" type="xs:string" use="required" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element minOccurs="0" maxOccurs="unbounded" name="table-field">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:string" />
+								<xs:attribute name="type" type="netDataTypes" />
+								<xs:attribute name="custom-type" type="xs:string" use="optional" />
+								<xs:attribute name="property" type="xs:string" />
+								<xs:attribute name="nullable" type="xs:boolean" use="optional" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="name" type="xs:string" use="required" />
+					<!-- todo mk "type" depend of "use" -->
+					<xs:attribute name="type" type="netWsDataTypes" use="optional" />
+					<xs:attribute name="enumerable-type" type="xs:string" use="optional" />
+					<xs:attribute name="sql-name" type="xs:string" use="optional" />
+					<xs:attribute name="sql-type" type="sqlDataTypes" use="optional" />
+					<!-- todo mk "use" depend of "type" -->
+					<xs:attribute name="transform-helper" type="netTranformHelper" use="optional" />
+					<xs:attribute name="nullable" type="xs:boolean" use="optional" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="out-scalar" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="type" type="netDataTypes" use="required" />
+					<xs:attribute name="sql-name" type="xs:string" use="required" />
+					<xs:attribute name="nullable" type="xs:boolean" use="optional" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="exclude-property" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="count-rows" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="sql-name" type="xs:string" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="return-wrapper" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="return-field">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:string" use="required" />
+								<!---todo mk use allowed values from in-paramter and predefined values -->
+								<xs:attribute name="value" type="netReturnFields" use="required" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="wrapper-type" type="netReturnWrapperTypes" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+		<xs:attribute name="procedure" type="xs:string" use="required" />
+		<xs:attribute name="single-entity" type="xs:boolean" use="optional" />
+		<xs:attribute name="security-context" type="securityContextType" use="optional" />
+	</xs:complexType>
+	<xs:complexType name="netSelectProcedureWrapper" >
+		<xs:complexContent>
+			<xs:extension base="netProcedureWrapper">
+				<xs:attribute name="getDataTableForExport" type="xs:boolean" />
+				<xs:attribute name="fill-custom-attributes-property" type="xs:boolean" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="class-map">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="properties" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="1" maxOccurs="unbounded" name="property">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required" />
+									<xs:attribute name="type" type="netDataTypes" use="required" />
+									<xs:attribute name="convert-type" type="netConvertTypes" use="optional" />
+									<xs:attribute name="sql-name" type="xs:string" use="required" />
+									<xs:attribute name="data-member" type="xs:string" use="optional" />
+									<!-- todo mk "type" depend of "use" -->
+									<xs:attribute name="enumClass" type="xs:string" use="optional" />
+									<!-- todo mk "type" depend of "use" -->
+									<xs:attribute name="is-required" type="xs:boolean" use="optional" />
+									<xs:attribute name="nullable" type="xs:boolean" use="optional" />
+									<xs:attribute name="min-value" type="maxMinValue" use="optional" />
+									<xs:attribute name="max-value" type="maxMinValue" use="optional" />
+									<xs:attribute name="max-string-length" type="xs:unsignedInt" use="optional" />
+									<xs:attribute name="regular-expression" type="xs:string" use="optional" />
+									<xs:attribute name="use-moneyrange-validator" type="xs:boolean" use="optional" />
+									<xs:attribute name="date-great-than-property" type="xs:string" use="optional" />
+									<xs:attribute name="allow-equal-dates" type="xs:boolean" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="methods" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="selector" type="netSelectProcedureWrapper" minOccurs="0" />
+							<xs:element name="updater" type="netProcedureWrapper" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="connection-string" type="xs:string" use="required" />
+			<xs:attribute name="data-contract-name" type="xs:string" use="optional" />
+			<xs:attribute name="data-contract-namespace" type="xs:string" use="optional" />
+			<xs:attribute name="generate-empty-constructor" type="xs:boolean" use="required" />
+			<xs:attribute name="generate-copy-constructor" type="xs:boolean" use="required" />
+			<xs:attribute name="partial" type="xs:boolean" use="required" />
+			<xs:attribute name="abstract" type="xs:boolean" use="optional" />
+			<xs:attribute name="add-custom-attributes-property" type="xs:boolean" use="optional" />
+			<xs:attribute name="security-context"  type="securityContextType" use="optional" />
+			<xs:attribute name="base" type="xs:string" use="optional" />
+			<xs:attribute name="generic-base-type" type="xs:string" use="optional" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

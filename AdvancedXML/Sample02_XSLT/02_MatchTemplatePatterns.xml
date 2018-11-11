@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<a>
+  <b attr="1"></b>
+  <c>
+    <b>
+      <e attr="2"></e>
+    </b>
+  </c>
+  <d></d>
+</a>
