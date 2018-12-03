@@ -30,10 +30,12 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -176,23 +178,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maxim_voronetski\\.nuget\\packages\\": {},
+    "C:\\Users\\Max\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maxim_voronetski\\source\\repos\\Multithreading\\Task4\\Task4.csproj",
-      "projectName": "Task4",
-      "projectPath": "C:\\Users\\maxim_voronetski\\source\\repos\\Multithreading\\Task4\\Task4.csproj",
-      "packagesPath": "C:\\Users\\maxim_voronetski\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maxim_voronetski\\source\\repos\\Multithreading\\Task4\\obj\\",
+      "projectUniqueName": "C:\\Users\\Max\\source\\repos\\mentoring\\Multithreading\\Task4\\M_Task04_10ThreadClass.csproj",
+      "projectName": "M_Task04_10ThreadClass",
+      "projectPath": "C:\\Users\\Max\\source\\repos\\mentoring\\Multithreading\\Task4\\M_Task04_10ThreadClass.csproj",
+      "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Max\\source\\repos\\mentoring\\Multithreading\\Task4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\maxim_voronetski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

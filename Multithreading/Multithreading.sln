@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj", "{3A8EE031-230F-497B-8B96-8FBAC08672C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Task01_Array100", "Task1\M_Task01_Array100.csproj", "{3A8EE031-230F-497B-8B96-8FBAC08672C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{B679B3D2-1AC1-428C-8AA1-3010F9026913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Task02_4Tasks", "Task2\M_Task02_4Tasks.csproj", "{B679B3D2-1AC1-428C-8AA1-3010F9026913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "Task3\Task3.csproj", "{E6511C73-15AA-4A13-8362-A0898B728D39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Task03_ParallelMatricesMultiply", "Task3\M_Task03_ParallelMatricesMultiply.csproj", "{E6511C73-15AA-4A13-8362-A0898B728D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4", "Task4\Task4.csproj", "{B61A0EDF-7581-40A1-B417-B7A6FE572986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M_Task04_10ThreadClass", "Task4\M_Task04_10ThreadClass.csproj", "{B61A0EDF-7581-40A1-B417-B7A6FE572986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task8", "Task8\Task8.csproj", "{68A05077-3E93-4921-9177-C8AC17C3E3F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Task01_AsyncSum", "Task8\A_Task01_AsyncSum.csproj", "{68A05077-3E93-4921-9177-C8AC17C3E3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Task04_UserEntityHandler", "A_Task04_UserEntityHandler\A_Task04_UserEntityHandler.csproj", "{5E950531-50C5-4678-ACD0-B205DA4E905D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{68A05077-3E93-4921-9177-C8AC17C3E3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68A05077-3E93-4921-9177-C8AC17C3E3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68A05077-3E93-4921-9177-C8AC17C3E3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
