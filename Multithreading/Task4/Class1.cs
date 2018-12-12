@@ -13,7 +13,7 @@ namespace Task4
 {
     public class Task4
     {
-        const int NUM_THREADS = 1;
+        const int NUM_THREADS = 10;
         static Thread[] array;
         static int j;
 
@@ -24,10 +24,10 @@ namespace Task4
                 var num = (NUM_THREADS - n) + 1;
                 Console.WriteLine("Creating thread #" + num);
                 array[num - 1] = new Thread(() => Decrement(ref j));
-                //array[num - 1].Start(j);
+                array[num - 1].Start(j);
+                n--;
+                CreateThread(n);
             }
-            n--;
-            CreateThread(n);
         }
 
 
@@ -37,21 +37,14 @@ namespace Task4
             var stopwatch = Stopwatch.StartNew();
 
             array = new Thread[NUM_THREADS];
-            //for (int i = 0; i < array.Length; i++)
-            //{
-            //    // Start the thread with a ThreadStart.
-            //    array[i] = new Thread(Decrement);
-            //    array[i].Start();
-            //}
 
             CreateThread(NUM_THREADS);
 
-            return;
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i].Start();
-            }
-
+            //return;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    array[i].Start();
+            //}
 
             for (int i = 0; i < array.Length; i++)
             {

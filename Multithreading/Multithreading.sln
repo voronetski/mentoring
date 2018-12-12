@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Task01_AsyncSum", "Task8\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Task04_UserEntityHandler", "A_Task04_UserEntityHandler\A_Task04_UserEntityHandler.csproj", "{5E950531-50C5-4678-ACD0-B205DA4E905D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Task06_SyncCollection", "M_Task06_SyncCollection\M_Task06_SyncCollection.csproj", "{31DA5736-1DCF-420C-9A24-A2A894DD5CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_Task05_10ThreadPoolClass", "M_Task05_10ThreadPoolClass\M_Task05_10ThreadPoolClass.csproj", "{B89965E3-419E-40A0-A3E8-489ED072651B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E950531-50C5-4678-ACD0-B205DA4E905D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DA5736-1DCF-420C-9A24-A2A894DD5CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DA5736-1DCF-420C-9A24-A2A894DD5CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DA5736-1DCF-420C-9A24-A2A894DD5CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DA5736-1DCF-420C-9A24-A2A894DD5CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89965E3-419E-40A0-A3E8-489ED072651B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89965E3-419E-40A0-A3E8-489ED072651B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89965E3-419E-40A0-A3E8-489ED072651B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89965E3-419E-40A0-A3E8-489ED072651B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
